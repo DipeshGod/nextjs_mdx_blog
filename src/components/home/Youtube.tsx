@@ -1,4 +1,4 @@
-import styles from "./YouTube.module.css";
+import styles from "./Youtube.module.css";
 
 export default function YouTube({ id }: { id: string }) {
   return (
