@@ -21,8 +21,10 @@ export default function PostPage({ post }: { post: MDXPost }) {
       <Head>
         <title>{post.meta.title}</title>
       </Head>
-      <h1>{post.meta.title}</h1>
-      <MDXRemote {...post.source} components={{ YouTube, Image }} />
+      <div className="container mx-auto p-3">
+        <h1 className="mt-10 mb-10 text-3xl ">{post.meta.title}</h1>
+        <MDXRemote {...post.source} components={{ YouTube, Image }} />
+      </div>
     </>
   );
 }
