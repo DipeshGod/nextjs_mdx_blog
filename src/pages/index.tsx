@@ -1,4 +1,6 @@
 import Head from "next/head";
+import HeroSection from "../components/home/HeroSection";
+import MoreAboutMe from "../components/home/MoreAboutMe";
 import MarkdownBlogCard from "../components/markdown/MarkdownBlogCard";
 import styles from "../styles/Home.module.css";
 import { getAllPosts, PostMeta } from "../utils/markdown";
@@ -12,6 +14,8 @@ const Home = ({ posts }: { posts: PostMeta[] }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto mt-10">
+        <HeroSection />
+        <MoreAboutMe />
         <h1 className="text-4xl mb-10">My Recent Blogs</h1>
         <div className="flex flex-wrap space-x-5">
           {posts.map((post, i) => (
