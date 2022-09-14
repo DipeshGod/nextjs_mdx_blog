@@ -1,6 +1,6 @@
 import type { GetStaticProps, GetStaticPaths } from "next";
 import Head from "next/head";
-import Articles from "../../components/home/Articles";
+import MarkdownBlogCard from "../../components/markdown/MarkdownBlogCard";
 import { getAllPosts, PostMeta } from "../../utils/markdown";
 
 export default function TagPage({
@@ -16,7 +16,9 @@ export default function TagPage({
         <title>Tag: {slug}</title>
       </Head>
       <h1>Tag: {slug}</h1>
-      <Articles posts={posts} />
+      {posts.map((post, i) => (
+        <MarkdownBlogCard key={i} post={post} />
+      ))}
     </>
   );
 }
