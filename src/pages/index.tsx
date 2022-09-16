@@ -15,7 +15,7 @@ const Home = ({ posts }: { posts: PostMeta[] }) => {
       </Head>
       <div className="mt-10">
         <HeroSection />
-        <MoreAboutMe />
+        {/* <MoreAboutMe />
         <div className="container mx-auto mb-20 xs:px-5 px-5 md:px-0">
           <h1 className="text-3xl font-medium mb-10 tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white">
             My Recent Blogs
@@ -25,7 +25,7 @@ const Home = ({ posts }: { posts: PostMeta[] }) => {
               <MarkdownBlogCard key={`${post}-${i}`} post={post} />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
